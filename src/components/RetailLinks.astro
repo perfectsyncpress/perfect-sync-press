@@ -1,0 +1,21 @@
+---
+const links = [
+  { label: 'Books2Read', url: 'https://books2read.com/' },
+  { label: 'Goodreads', url: '#' },
+  { label: 'Amazon', url: '#' },
+  { label: 'Apple Books', url: '#' },
+  { label: 'Barnes & Noble', url: '#' },
+  { label: 'Kobo', url: '#' },
+  { label: 'Google Play Books', url: '#' },
+  { label: 'Bookshop.org', url: '#' },
+];
+---
+<div class="retail-grid" aria-label="Retail and reader links">
+  {links.map((link) => (
+    <a class="retail-link" href={link.url} target={link.url === '#' ? undefined : '_blank'} rel={link.url === '#' ? undefined : 'noreferrer'}>
+      <span>{link.label}</span>
+      <span>{link.url === '#' ? 'Coming soon' : 'Open'}</span>
+    </a>
+  ))}
+</div>
+<p class="note">Replace placeholder links in <code>src/components/RetailLinks.astro</code> once final Goodreads and retailer URLs are available.</p>

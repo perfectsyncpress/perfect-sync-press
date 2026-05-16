@@ -1,0 +1,12 @@
+<svg width="900" height="1350" viewBox="0 0 900 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1350" fill="#17110f"/>
+  <rect x="58" y="58" width="784" height="1234" rx="28" stroke="#c9a46a" stroke-width="4" opacity="0.65"/>
+  <circle cx="450" cy="430" r="158" fill="#c9a46a" opacity="0.16"/>
+  <path d="M290 495C360 380 540 380 610 495" stroke="#eadfcb" stroke-width="10" stroke-linecap="round" opacity="0.82"/>
+  <path d="M315 552C382 642 518 642 585 552" stroke="#eadfcb" stroke-width="10" stroke-linecap="round" opacity="0.82"/>
+  <text x="450" y="760" text-anchor="middle" fill="#f3eadb" font-family="Georgia, serif" font-size="84" letter-spacing="3">PERFECTLY</text>
+  <text x="450" y="855" text-anchor="middle" fill="#f3eadb" font-family="Georgia, serif" font-size="84" letter-spacing="3">IN SYNC</text>
+  <line x1="265" y1="925" x2="635" y2="925" stroke="#c9a46a" stroke-width="3" opacity="0.8"/>
+  <text x="450" y="1005" text-anchor="middle" fill="#c9a46a" font-family="Georgia, serif" font-size="42" letter-spacing="4">JOSEPH JUNEAU</text>
+  <text x="450" y="1130" text-anchor="middle" fill="#eadfcb" font-family="Arial, sans-serif" font-size="26" opacity="0.75">Cover placeholder</text>
+</svg>

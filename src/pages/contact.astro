@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const email = 'contact@insyncpub.com';
+---
+<BaseLayout title="Contact | Perfect Sync Press" description="Contact Perfect Sync Press for general inquiries, review copies, rights, permissions, and media requests.">
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch.</h1>
+      <p class="lede">For reader messages, review copy requests, rights questions, media inquiries, or bookstore information, reach out to Perfect Sync Press.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="form-card">
+        <h2>Contact options</h2>
+        <p>Use the inquiry links below, or replace this section with a Formspree, Basin, or Netlify form when you are ready.</p>
+        <div class="actions">
+          <a class="button primary" href={`mailto:${email}?subject=Perfect Sync Press Inquiry`}>Email Perfect Sync Press</a>
+        </div>
+      </div>
+      <div class="contact-options">
+        <div class="contact-row">
+          <strong>General inquiries</strong>
+          <a href={`mailto:${email}?subject=General Inquiry`}>{email}</a>
+        </div>
+        <div class="contact-row">
+          <strong>Review copies</strong>
+          <a href={`mailto:${email}?subject=Review Copy Request for Perfectly in Sync`}>Request a review copy</a>
+        </div>
+        <div class="contact-row">
+          <strong>Rights and permissions</strong>
+          <a href={`mailto:${email}?subject=Rights and Permissions Inquiry`}>Ask about rights</a>
+        </div>
+        <div class="contact-row">
+          <strong>Media and interviews</strong>
+          <a href={`mailto:${email}?subject=Media Inquiry`}>Send a media inquiry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

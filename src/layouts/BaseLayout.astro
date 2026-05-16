@@ -1,0 +1,47 @@
+---
+import '../styles.css';
+
+const {
+  title = 'Perfect Sync Press',
+  description = 'Stories that resonate. Ideas in harmony.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://insyncpub.com" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="/">Perfect Sync Press</a>
+        <div class="nav-links">
+          <a href="/book/">Book</a>
+          <a href="/about/">Author</a>
+          <a href="/contact/">Contact</a>
+          <a href="/book/#buy">Where to Buy</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>© {new Date().getFullYear()} Perfect Sync Press. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="/book/">Perfectly in Sync</a>
+          <a href="/about/">Joseph Juneau</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

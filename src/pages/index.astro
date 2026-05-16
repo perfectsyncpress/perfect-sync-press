@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RetailLinks from '../components/RetailLinks.astro';
+---
+<BaseLayout title="Perfect Sync Press | Perfectly in Sync" description="Perfect Sync Press publishes stories that resonate. Perfectly in Sync by Joseph Juneau is an intimate memoir of love, desire, trust, and the private language two people build together.">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Perfect Sync Press</p>
+        <h1>Stories that resonate. Ideas in harmony.</h1>
+        <p class="lede">Home of <em>Perfectly in Sync</em>, an intimate memoir of love, desire, trust, and the private language two people build together when they are willing to be fully seen.</p>
+        <div class="actions">
+          <a class="button primary" href="/book/#buy">Get the Book</a>
+          <a class="button" href="/book/">Read About It</a>
+          <a class="button" href="/contact/">Contact</a>
+        </div>
+      </div>
+      <div class="book-cover-wrap">
+        <img class="book-cover" src="/assets/book-cover.png" alt="Perfectly in Sync book cover" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <p class="eyebrow">Now Available</p>
+        <h2>Perfectly in Sync</h2>
+        <p class="lede">A sensual, honest, and deeply reflective memoir about connection, transformation, and learning the shape of another person in full.</p>
+      </div>
+      <div class="prose book-description">
+        <p>What begins as curiosity leads Joseph and Anna into the hidden world of the club, where watching becomes its own kind of intimacy, where jealousy sharpens instead of disappearing, and where pleasure, risk, and vulnerability reveal more than either of them expected.</p>
+        <p>But this is not just a story about nightlife, sex, or novelty. It is the story of what those experiences opened between them.</p>
+        <div class="actions">
+          <a class="button primary" href="/book/">Explore the Book</a>
+          <a class="button" href="/about/">Meet the Author</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="buy">
+    <div class="container">
+      <p class="eyebrow">Where to Buy</p>
+      <h2>Find the book</h2>
+      <RetailLinks />
+    </div>
+  </section>
+</BaseLayout>
