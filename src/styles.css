@@ -73,6 +73,23 @@ img {
   color: var(--accent-soft);
 }
 
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo img {
+  width: 54px;
+  height: auto;
+  display: block;
+}
+
+.brand-logo span {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
