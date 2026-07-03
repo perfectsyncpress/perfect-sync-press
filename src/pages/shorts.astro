@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const youtubeChannelUrl = 'https://www.youtube.com/channel/UC81eVqLGJEUIMllLsNnmZQg';
+
+// Upload these source files to YouTube Shorts, then replace the placeholder
+// youtubeId values below with the real IDs from each YouTube URL.
+const plannedVideos = [
+  {
+    title: 'Ballgame',
+    sourceFile: 'ballgame.mp4',
+    description: 'A quick brick-style ballgame moment inspired by Perfectly in Sync.'
+  },
+  {
+    title: 'Construction',
+    sourceFile: 'construction.mp4',
+    description: 'A playful construction-themed animated short from the Perfectly in Sync world.'
+  },
+  {
+    title: 'Drive-In',
+    sourceFile: 'drive-in.mp4',
+    description: 'A nostalgic drive-in scene inspired by Perfectly in Sync.'
+  }
+];
+
+const videos = [
+  {
+    title: 'Drive-In',
+    youtubeId: 'GX3mEm8zV8E',
+    description: 'A nostalgic drive-in scene inspired by Perfectly in Sync.'
+  },
+  {
+    title: 'Construction',
+    youtubeId: 'FereI4OhERU',
+    description: 'A playful construction-themed animated short from the Perfectly in Sync world.'
+  },
+  {
+    title: 'Ballgame',
+    youtubeId: '_PxwnuFNZX4',
+    description: 'A quick brick-style ballgame moment inspired by Perfectly in Sync.'
+  }
+];
+---
+
+<BaseLayout title="Animated Shorts | Perfect Sync Press" description="Short brick-style animated scenes inspired by Perfectly in Sync.">
+  <section class="hero small-hero shorts-hero">
+    <div class="container">
+      <p class="eyebrow">Animated Shorts</p>
+      <h1>Mini stories from the world of <em>Perfectly in Sync</em>.</h1>
+      <p class="lede">
+        Short brick-style animated scenes inspired by the themes, humour, and heart of
+        <em>Perfectly in Sync</em>. Follow along as new clips are released during the book's launch journey.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="#subscribe">Subscribe for Updates</a>
+        <a class="button" href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        <a class="button" href="/book/">Explore the Book</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="subscribe">
+    <div class="container two-col">
+      <div>
+        <p class="eyebrow">Launch List</p>
+        <h2>Get new shorts and book updates.</h2>
+        <p class="lede">
+          Subscribe for new animated clips, behind-the-scenes notes, release updates, and book news.
+        </p>
+      </div>
+
+      <div class="form-card">
+        <form class="contact-form" action="https://formsubmit.co/info@insyncpub.com" method="POST">
+          <input type="hidden" name="_subject" value="New Perfect Sync Press shorts subscriber" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="source" value="Animated Shorts page" />
+
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <button class="button primary" type="submit">Subscribe</button>
+          <p class="note">Your email will be used for Perfect Sync Press book and video updates.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Watch</p>
+      <h2>Latest animated shorts</h2>
+
+      {videos.length > 0 ? (
+        <div class="video-grid">
+          {videos.map((video) => (
+            <article class="video-card">
+              <div class="video-wrapper">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                  title={video.title}
+                  loading="lazy"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <h3>{video.title}</h3>
+              <p>{video.description}</p>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="quote-card compact coming-soon-card">
+          <p class="eyebrow">Ready to Add</p>
+          <h3>Three animated shorts are ready for YouTube.</h3>
+          <p>
+            Upload the videos below to YouTube Shorts, then add their YouTube IDs to this page to embed them here.
+          </p>
+          <ul class="planned-video-list">
+            {plannedVideos.map((video) => (
+              <li>
+                <strong>{video.title}</strong>
+                <span>{video.sourceFile}</span>
+              </li>
+            ))}
+          </ul>
+          <a class="button primary" href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer">Visit the YouTube Channel</a>
+        </div>
+      )}
+
+      <p class="disclaimer">
+        These animated shorts are independently created and are not sponsored, authorized, or endorsed by the LEGO Group.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
